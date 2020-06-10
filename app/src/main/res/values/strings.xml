@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Converter</string>
+    <string name="hello_un">0</string>
+    <string name="toast_button">Toast</string>
+    <string name="count_button">Update</string>
+    <string name="random_button">Random</string>
+
+    <string-array name="currencies_ar">
+        <item>USD</item>
+        <item>RUB</item>
+        <item>EUR</item>
+        <item>JPY</item>
+        <item>GBP</item>
+    </string-array>
+</resources>

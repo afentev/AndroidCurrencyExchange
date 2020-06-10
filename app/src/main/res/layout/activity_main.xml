@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/newBlue"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="80dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="87dp"
+        android:fontFamily="sans-serif-light"
+        android:gravity="center"
+        android:text="Ex. rate: "
+        android:textAlignment="center"
+        android:textColor="@color/newTexter"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/newYellow"
+        android:fontFamily="sans-serif-light"
+
+        android:onClick="updater"
+        android:text="@string/count_button"
+
+        android:textColor="@color/newButtonTexter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextNumber2" />
+
+    <EditText
+        android:id="@+id/editTextNumber"
+        android:layout_width="167dp"
+        android:layout_height="70dp"
+        android:layout_marginEnd="36dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/editTextNumber2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.836" />
+
+    <EditText
+        android:id="@+id/editTextNumber2"
+        android:layout_width="167dp"
+        android:layout_height="70dp"
+        android:layout_marginEnd="36dp"
+        android:layout_marginBottom="64dp"
+        android:ems="10"
+
+        android:inputType="numberDecimal"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.397" />
+
+    <EditText
+        android:id="@+id/editTextNumber3"
+        android:layout_width="70dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="72dp"
+        android:ems="10"
+        android:inputType="number|numberDecimal"
+        android:text="1"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView7"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.517"
+        tools:text="1" />
+
+    <EditText
+        android:id="@+id/editTextNumber5"
+        android:layout_width="76dp"
+        android:layout_height="66dp"
+        android:layout_marginTop="72dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:text="74.0"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/textView6"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.517" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="22dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="87dp"
+        android:fontFamily="sans-serif-light"
+        android:gravity="center"
+        android:text="="
+        android:textColor="@color/newTexter"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/editTextNumber5"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5" />
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="96dp"
+        android:layout_height="70dp"
+        android:layout_marginEnd="250dp"
+        android:textAlignment="center"
+        android:textColor="@color/newTexter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.201" />
+
+    <Spinner
+        android:id="@+id/spinner2"
+        android:layout_width="96dp"
+        android:layout_height="70dp"
+        android:layout_marginEnd="250dp"
+        android:textColor="@color/newTexter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.356" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="32dp"
+        android:layout_height="70dp"
+        android:layout_marginEnd="40dp"
+        android:gravity="center"
+        android:text="="
+        android:textColor="@color/newTexter"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/editTextNumber"
+        app:layout_constraintStart_toEndOf="@+id/spinner"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.201" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="32dp"
+        android:layout_height="70dp"
+        android:layout_marginEnd="40dp"
+        android:fontFamily="sans-serif-light"
+        android:gravity="center"
+        android:text="="
+        android:textColor="@color/newTexter"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/editTextNumber2"
+        app:layout_constraintStart_toEndOf="@+id/spinner2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.356" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="55dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="87dp"
+        android:fontFamily="sans-serif-light"
+        android:gravity="center"
+        android:text="USD"
+        android:textColor="@color/newTexter"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/editTextNumber3"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="59dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="87dp"
+        android:fontFamily="sans-serif-light"
+        android:gravity="center"
+        android:text="RUB"
+        android:textColor="@color/newTexter"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

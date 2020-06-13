@@ -42,8 +42,6 @@ fun Double.round(n: Int = 3): String {
 
 
 class MainActivity : AppCompatActivity() {
-    var ok = true
-    var updating = false
     var bzkMap: HashMap<String, String> = hashMapOf("RUB" to "₽", "USD" to "$", "EUR" to "€",
                                                     "GBP" to "£", "JPY" to "¥")
 
@@ -266,15 +264,12 @@ class MainActivity : AppCompatActivity() {
 
         val saved = settings?.getInt("last", -1)?.toLong()
         val time: Long = Calendar.getInstance().timeInMillis / 1000
-        val r = (time - 55200) / c
+        val r = (time - 58500) / c
 
-        /* 55200 because EuSB updates coming at 15:00 GMT. */
+        /* 58500 because EuCB updates coming at 15:00 GMT and 58500 is 17:15 GMT */
 
-//        val editor = settings?.edit()
-//        editor?.putInt("last", 0)
-//        editor?.apply()
-        if (r - saved!! >= 1 && time % c >= 55200) {
-            decor(false)
+        if (r - saved!! >= 1 && time % c >= 58500) {
+            decor()
 
             val editor = settings?.edit()
             if (editor != null) {
@@ -306,7 +301,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    private fun decor(first: Boolean) {
+    private fun decor() {
         try {
             updateRates("GBP")
             updateRates("EUR")
@@ -324,10 +319,8 @@ class MainActivity : AppCompatActivity() {
                 editTextNumber3.setText("1")
             }
         } catch (e: java.lang.Exception) /* I'm doing my best here :( */ {
-            if (!first) {
-                val myToast = Toast.makeText(this, "Connection failed", Toast.LENGTH_SHORT)
-                myToast.show()
-            }
+            val myToast = Toast.makeText(this, "Connection failed", Toast.LENGTH_SHORT)
+            myToast.show()
         }
     }
 
@@ -383,7 +376,6 @@ class MainActivity : AppCompatActivity() {
         con.requestMethod = "GET"
         con.connectTimeout = 1000
         con.readTimeout = 1000
-        //val status = con.responseCode
         val in_ = BufferedReader(
             InputStreamReader(con.inputStream)
         )
@@ -396,11 +388,4 @@ class MainActivity : AppCompatActivity() {
         con.disconnect()
         return content.toString()
     }
-
-    /*
-    fun toastMe(view: View) {
-        val myToast = Toast.makeText(this, "Hello Toast!", Toast.LENGTH_SHORT)
-        myToast.show()
-    }
-     */
 }
